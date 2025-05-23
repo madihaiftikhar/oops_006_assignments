@@ -1,12 +1,20 @@
-class Student:
-    def __init__(self,name ,marks):
-        self.name = name
-        self.marks = marks
+from itertools import count
 
-    def display(self):
-        print(f"Name: {self.name}, Marks: {self.marks}")
+
+class Counter:
+    count = 0
+
+    def __init__(self):
+        Counter.count +=1
+
+    @classmethod 
+    def show_count(cls): 
+        print(f"Total objects created: {cls.count}")   
 
 if __name__ == "__main__":
-    student1 = Student("Madiha", 34)
-    student1.display()
-     
+    obj1 = Counter()
+    obj2 = Counter()
+    obj3 = Counter()
+    obj4 = Counter()
+    obj5 = Counter()
+    Counter.show_count()
