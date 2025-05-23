@@ -1,20 +1,12 @@
-from itertools import count
-
-
-class Counter:
-    count = 0
-
-    def __init__(self):
-        Counter.count +=1
-
-    @classmethod 
-    def show_count(cls): 
-        print(f"Total objects created: {cls.count}")   
+class Car:
+    def __init__(self, brand):
+        self.brand = brand
+    
+    def start(self):
+        print(f"{self.brand} Mercedes is statrting...")
+        
 
 if __name__ == "__main__":
-    obj1 = Counter()
-    obj2 = Counter()
-    obj3 = Counter()
-    obj4 = Counter()
-    obj5 = Counter()
-    Counter.show_count()
+    my_car = Car("Mercedes")
+    print(my_car.brand)
+    my_car.start()
